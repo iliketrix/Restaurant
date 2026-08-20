@@ -1,0 +1,41 @@
+:root{
+    --accent-color: #f87171;
+    --text-light: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: arial;
+    background-color: #fafafa;
+}
+
+/*Table basic style*/
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+th,td{
+    border: 1px solid black;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+}
+
+th{
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+/* Schedule table */
+
+.scheduleTable th{
+    background-color: var(--header-bg);
+    text-align: center;
+}
+.scheduleTable td{
+    text-align: center;
+}
