@@ -1,0 +1,18 @@
+p{
+    background-color: antiquewhite;
+    padding: 10px;
+    font-weight: bold;
+    margin:1px;
+}
+.container-flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+.container-flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.container-center{
+    display: flex;
+    justify-content: center;
+}

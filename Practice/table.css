@@ -1,62 +1,129 @@
-:root{
+:root {
     --accent-color: #f87171;
     --text-light: #ffffff;
+    --body-bg: #fafafa;
+    --border-dark: #000000;
+
+    --header-bg: #334155;
+    --primary-color: #475569;
+    --row-alt: #f1f5f9;
+    --row-hover: #e2e8f0;
+    --table-bg: #ffffff;
+    --res-header-bg: #1e293b;
+    --res-row-alt: #f8fafc;
+    --res-row-hover: #f1f5f9;
+    --res-border: #cbd5e1;
+
+    --confirmed-bg: #dcfce7;
+    --confirmed-text: #15803d;
+    --pending-bg: #fef9c3;
+    --pending-text: #a16207;
+    --cancelled-bg: #fee2e2;
+    --cancelled-text: #b91c1c;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: arial;
-    background-color: #fafafa;
+    background-color: var(--body-bg);
 }
 
-/*Table basic style*/
 
-table{
+table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
     margin-bottom: 20px;
 }
-th,td{
-    border: 1px solid black;
+
+th, td {
+    border: 1px solid var(--border-dark);
     text-align: left;
     font-size: 14px;
     padding: 10px;
 }
 
-th{
+th {
     background-color: var(--accent-color);
     color: var(--text-light);
 }
-/* Schedule table */
 
-.scheduleTable th{
+
+.scheduleTable th {
     background-color: var(--header-bg);
     text-align: center;
 }
-.scheduleTable td{
+
+.scheduleTable td {
     text-align: center;
 }
 
-/*styled table*/
 
-.styledTable th{
+.styledTable th {
     background-color: var(--primary-color);
     text-align: center;
 }
 
-/*zebra striping*/
-.styledTable tbody tr:nth-child(even){
+.styledTable tbody tr:nth-child(even) {
     background-color: var(--row-alt);
 }
 
-.styledTable tbody tr
-    background-color:var(--row-hover);
+.styledTable tbody tr:hover {
+    background-color: var(--row-hover);
     color: var(--text-light);
     cursor: pointer;
 }
-.styledTable th{
 
+.styledTable th {
+
+}
+.reservation-table {
+    background-color: var(--table-bg);
+}
+
+.reservation-table th,
+.reservation-table td {
+    border-color: var(--res-border);
+}
+
+.reservation-table thead th {
+    background-color: var(--res-header-bg);
+    color: var(--text-light);
+}
+
+.reservation-table tbody tr:nth-child(even) {
+    background-color: var(--res-row-alt);
+}
+
+.reservation-table tbody tr:hover {
+    background-color: var(--res-row-hover);
+}
+
+.status-confirmed,
+.status-pending,
+.status-cancelled {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status-confirmed {
+    background-color: var(--confirmed-bg);
+    color: var(--confirmed-text);
+}
+
+.status-pending {
+    background-color: var(--pending-bg);
+    color: var(--pending-text);
+}
+
+.status-cancelled {
+    background-color: var(--cancelled-bg);
+    color: var(--cancelled-text);
 }
